@@ -34,23 +34,23 @@
 
 💻 코드 예시
 
-from fastapi import FastAPI
+    from fastapi import FastAPI
 
-from typing import Union
+    from typing import Union
 
-app = FastAPI()
+    app = FastAPI()
 
-@app.get("/")
+    @app.get("/")
 
-def read_root():
+    def read_root():
 
-    return {"hello": "fastapi"}
+        return {"hello": "fastapi"}
 
-@app.get("/items/{item_id}")
+    @app.get("/items/{item_id}")
 
-def read_item(item_id: int, q: Union[str, None] = None):
+    def read_item(item_id: int, q: Union[str, None] = None):
 
-    return {"item_id": item_id, "q": q}
+        return {"item_id": item_id, "q": q}
 
 
 🎯 목표
